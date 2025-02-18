@@ -23,7 +23,13 @@ class GlobalObserver {
                     _ = w.focusWindow()
                     _ = w.nativeFocus()
                 }
+                // Iterate over all apps and only unhide those not in the exceptions list.
                 for app in MacApp.allAppsMap.values {
+                    if let bundleId = app.nsApp.bundleIdentifier,
+                       config.automaticallyUnhideMacosHiddenAppsExceptions.contains(bundleId) {
+                        // Skip un-hiding this app because it's in the exceptions list.
+                        continue
+                    }
                     app.nsApp.unhide()
                 }
             }

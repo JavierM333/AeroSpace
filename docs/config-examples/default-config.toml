@@ -44,7 +44,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 # automatically automatically-unhide-macos-hidden-apps must be true if exceptions array is non-empty
 automatically-unhide-macos-hidden-apps = true
-automatically-unhide-macos-hidden-apps-exceptions = []
+automatically-unhide-macos-hidden-apps-exceptions = ["com.apple.Safari"]
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping

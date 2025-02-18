@@ -30,6 +30,7 @@ let defaultConfig: Config = {
     if !config.automaticallyUnhideMacosHiddenApps && !config.automaticallyUnhideMacosHiddenAppsExceptions.isEmpty {
         error("Config error: automatically-unhide-macos-hidden-apps is false but exceptions array is non-empty.")
     }
+    
     return config
 }()
 var config: Config = defaultConfig
